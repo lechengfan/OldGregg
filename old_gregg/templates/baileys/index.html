@@ -4,13 +4,13 @@
 {% load static %}
     <head>
         <title>Baileys</title>
+        <link rel="stylesheet" href="{% static "style.css" %}" />
     </head>
 
     <body>
-        <h1>Old Gregg says...</h1>
-        <strong>{{ boldmessage }}</strong><br />
-
         <img src = "{% static "shoe.jpg" %}" alt = "Picture of a shoe" />
+        <h1> <strong>{{ boldmessage }}</strong><br /> </h1>
     </body>
+
 
 </html>
