@@ -4,7 +4,11 @@
 {% load static %}
     <head>
         <title>Baileys</title>
+        <meta charset="utf-8"/>
         <link rel="stylesheet" href="{% static "style.css" %}" />
+
+        <script src="{% static "jquery-1.11.1.js" %}"></script>
+        <script src="{% static "baileys.js" %}"></script>
     </head>
 
     <body>
@@ -16,8 +20,9 @@
         
         <div id="info">
         	<h1> <strong>{{ boldmessage }}</strong><br /> </h1>
-        	<button type="button">Refill</button>
+        	<button type="button" id="button">Refill</button>
         </div>
+
     </body>
 
 
