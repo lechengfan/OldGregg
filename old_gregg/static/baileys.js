@@ -30,3 +30,4 @@ $('button').click(function() {
    	$("#baileys").animate({top: "0em"}, 1000);
     clicked = 0;
 });
+
