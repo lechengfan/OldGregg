@@ -9,15 +9,15 @@ var clicked = 0;
  $('#shoePic').click(function() {
     switch(clicked) {
         case 0:
-         	$("#baileys").animate({top: "7em"}, 1000);
+         	$("#baileys").animate({top: "12em"}, 1000);
             clicked++;
             break;
         case 1:
-            $("#baileys").animate({top: "14em"}, 1000);
+            $("#baileys").animate({top: "24em"}, 1000);
             clicked++;
             break;
         case 2:
-            $("#baileys").animate({top: "21em"}, 1000);
+            $("#baileys").animate({top: "33em"}, 1000);
             clicked++;
             break;
         default: 
