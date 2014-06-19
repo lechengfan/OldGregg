@@ -4,19 +4,21 @@
 {% load static %}
     <head>
         <title>Baileys</title>
+        <meta charset=”utf-8”> 
         <link rel="stylesheet" href="{% static "style.css" %}" />
     </head>
 
     <body>
-        <img id="outline" src = "{% static "Shoe1.png" %}" alt = "Picture of a shoe" />
-        <img id="transparentShoe" src = "{% static "Shoe2.png" %}" alt = "Picture of a shoe" />
-        <img id="background" src = "{% static "Shoe3.png" %}" alt = "Picture of a shoe" />
-        <img id="baileys" src = "{% static "Shoe4.png" %}" alt = "Picture of a shoe" />
-        <img id="shoe" src = "{% static "Shoe5.png" %}" alt = "Picture of a shoe" />
-        
+        <div id = "image">
+            <img id="outline" src = "{% static "Shoe1.png" %}" alt = "Picture of a shoe" />
+            <img id="transparentShoe" src = "{% static "Shoe2.png" %}" alt = "Picture of a shoe" />
+            <img id="background" src = "{% static "Shoe3.png" %}" alt = "Picture of a shoe" />
+            <img id="baileys" src = "{% static "Shoe4.png" %}" alt = "Picture of a shoe" />
+            <img id="shoe" src = "{% static "Shoe5.png" %}" alt = "Picture of a shoe" />
+        </div>
         <div id="info">
-        	<h1> <strong>{{ boldmessage }}</strong><br /> </h1>
-        	<button type="button">Refill</button>
+        	<h1> <strong>{{ boldmessage }}</strong><br /> </h1> </br>
+        	<div id="button"><button type="button" class="btn btn-primary btn-lg btn-block">Refill</button> </div>
         </div>
     </body>
 
