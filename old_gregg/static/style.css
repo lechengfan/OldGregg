@@ -1,15 +1,39 @@
 img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	position: absolute;
+	left: 35%;
 	margin-top: 10em;
 	width: 35em;
 	height: 25em;
-	opacity: 0.5;
 }
 
-h1 {
+#info {
+	position: fixed;
 	text-align: center;
-	margin-top: 5em;
+	margin-top: 35em;
+	display: inline-block;
+	left: 36%;
+	z-index: 6;
+	background-color: #FFFFFF;
+	height: 100em;
 }
 
+#outline {
+	z-index: 5;
+}
+
+#transparentShoe {
+	z-index: 3;
+}
+
+#background {
+	z-index: 4;
+}
+
+#baileys {
+	z-index: 2;
+	margin-top: 20em;
+}
+
+#shoe {
+	z-index: 1;
+}
