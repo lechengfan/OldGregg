@@ -1,21 +1,24 @@
+@import url("css/bootstrap.min.css"); 
+
+
+#image {
+	margin: 0 auto;
+	width: 55em;
+	height: 40em;
+}
 img {
 	position: absolute;
-	left: 35%;
-	margin-top: 10em;
-	width: 35em;
-	height: 25em;
+	width: 45%;
 }
 
 #info {
-	position: fixed;
+	position: relative;
 	text-align: center;
-	margin-top: 35em;
-	display: inline-block;
-	left: 29%;
 	z-index: 6;
 	background-color: #FFFFFF;
-	height: 100em;
-	width: 50em;
+	margin: 0 auto;
+	height: 10em;
+	width: 55em;
 }
 
 #outline {
@@ -23,17 +26,26 @@ img {
 }
 
 #transparentShoe {
-	z-index: 3;
+	z-index: 4;
 }
 
 #background {
-	z-index: 4;
+	z-index: 3;
 }
 
 #baileys {
 	z-index: 2;
+<<<<<<< HEAD
+=======
+	margin-top: 3em;
+>>>>>>> lechengs_branch
 }
 
 #shoe {
 	z-index: 1;
+}
+
+#button {
+	width: 30%;
+	margin: 0 auto;
 }
