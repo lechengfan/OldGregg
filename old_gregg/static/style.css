@@ -11,10 +11,11 @@ img {
 	text-align: center;
 	margin-top: 35em;
 	display: inline-block;
-	left: 36%;
+	left: 29%;
 	z-index: 6;
 	background-color: #FFFFFF;
 	height: 100em;
+	width: 50em;
 }
 
 #outline {
