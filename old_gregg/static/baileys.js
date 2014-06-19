@@ -1,30 +1,32 @@
 //Animations for the Bailey's drink
 
+$(document).ready(function() {
+            $('h1').hide().fadeIn(5000);
+        });
+
 var clicked = 0;
 
-$(document).ready(function() {
-	$("#info").fadeIn("slow");
+ $('#shoePic').click(function() {
+    switch(clicked) {
+        case 0:
+         	$("#baileys").animate({top: "7em"}, 1000);
+            clicked++;
+            break;
+        case 1:
+            $("#baileys").animate({top: "14em"}, 1000);
+            clicked++;
+            break;
+        case 2:
+            $("#baileys").animate({top: "21em"}, 1000);
+            clicked++;
+            break;
+        default: 
+            $("#baileys").animate({top: "0em"}, 1000);
+             clicked = 0;
+    }
 });
 
-$("#shoe").onClick(function() {
-	$("#info").fadeIn("slow");
-	switch(clicked) {
-		case 0:
-			$("#baileys").animate({margin-top: "17em"}, 500);
-			clicked++;
-			break;
-		case 1;
-			$("#baileys").animate({margin-top: "24em"}, 500);
-			clicked++;
-			break;
-		case 2;
-			$("#baileys").animate({margin-top: "30em"}, 500);
-			clicked++;
-			break;
-	}
-});
-
-$("button").onClick(function() {
-	$("#baileys").animate({margin-top: "10em"}, 2000);
-	clicked = 0;
+$('button').click(function() {
+   	$("#baileys").animate({top: "0em"}, 1000);
+    clicked = 0;
 });
