@@ -11,6 +11,8 @@ var html5_audiotypes={ //define list of audio file extensions and their associat
     "wav": "audio/wav"
 }
 
+var playing
+
 function createsoundbite(sound){
     var html5audio=document.createElement('audio')
     if (html5audio.canPlayType){ //check support for HTML5 audio

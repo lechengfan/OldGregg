@@ -8,58 +8,12 @@
         <meta charset=”utf-8”> 
         <link rel="stylesheet" href="{% static "style.css" %}" />
         <script src="{% static "jquery-1.11.1.js" %}"></script>
-        <script>
-
-        // Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
-        // Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
-
-        //** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
-        //** Call: uniquevar.playclip() to play sound
-
-        var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
-            "mp3": "audio/mpeg",
-            "mp4": "audio/mp4",
-            "ogg": "audio/ogg",
-            "wav": "audio/wav"
-        }
-
-        function createsoundbite(sound){
-            var html5audio=document.createElement('audio')
-            if (html5audio.canPlayType){ //check support for HTML5 audio
-                for (var i=0; i<arguments.length; i++){
-                    var sourceel=document.createElement('source')
-                    sourceel.setAttribute('src', arguments[i])
-                    if (arguments[i].match(/\.(\w+)$/i))
-                        sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
-                    html5audio.appendChild(sourceel)
-                }
-                html5audio.load()
-                html5audio.playclip=function(){
-                    html5audio.pause()
-                    html5audio.currentTime=0
-                    html5audio.play()
-                }
-                return html5audio
-            }
-            else{
-                return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
-            }
-        }
-
-        //Initialize two sound clips with 1 fallback file each:
-
-        var mouseover=createsoundbite("{% static "lovegames.mp3" %}")
-        var clicksound=createsoundbite("{% static "baileysfromashoe.mp3" %}")
-
-</script>
-
-     
     </head>
 
     <body>
         <div id="shoePic">
         <div id = "image">
-            <img id="outline" src = "{% static "Shoe1.png" %}" alt = "Picture of a shoe" onmouseover="mouseover.playclip()"/>
+            <img id="outline" src = "{% static "Shoe1.png" %}" alt = "Picture of a shoe" onClick="drink()"/>
             <img id="transparentShoe" src = "{% static "Shoe2.png" %}" alt = "Picture of a shoe" />
             <img id="background" src = "{% static "Shoe3.png" %}" alt = "Picture of a shoe" />
             <img id="baileys" src = "{% static "Shoe4.png" %}" alt = "Picture of a shoe" />
@@ -69,9 +23,26 @@
         
         <div id="info">
         	<h1> <strong>{{ boldmessage }}</strong><br /> </h1> </br>
-        	<div id="button"><button type="button" class="btn btn-primary btn-lg btn-block" onclick = "clicksound.playclip()">Refill</button> </div>
+        	<div id="button"><button type="button" class="btn btn-primary btn-lg btn-block" onclick = "refill()">Refill</button> </div>
         </div>
         <script type="text/javascript" src="{% static "baileys.js" %}"></script>
+
+        <audio controls loop autoplay=false hidden=true id="loveGames">
+            <source src="{% static "lovegames.mp3" %}" type="audio/mpeg">
+            Your browser does not support HTML5 audio.
+        </audio>
+
+        <audio controls autoplay=false hidden=true id="question">
+            <source src="{% static "baileysfromashoe.mp3" %}" type="audio/mpeg">
+        </audio>
+
+        <audio controls hidden=false autoplay=true id="fill">
+            <source src="{% static "pouring-beer-1.mp3" %}" type="audio/mpeg">
+        </audio>
+
+        <audio controls hidden=false autoplay=true id="gulp">
+            <source src="{% static "gulp.mp3" %}" type="audio/mpeg">
+        </audio>
 
     </body>
 
