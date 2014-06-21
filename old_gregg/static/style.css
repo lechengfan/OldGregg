@@ -46,3 +46,8 @@ img {
 	width: 30%;
 	margin: 0 auto;
 }
+
+#loveGames {
+	position: absolute;
+	z-index: 7;
+}

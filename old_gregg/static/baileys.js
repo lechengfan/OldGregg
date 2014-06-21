@@ -13,7 +13,7 @@ var refill = function() {
     fill.play();
 }
 
- $('#shoePic').click(function() {
+ $('#outline').click(function() {
     switch(clicked) {
         case 0:
             $("#baileys").animate({top: "12em"}, 1000);
